@@ -44,36 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        isTouched = Physics.CheckSphere(treeCheck.position, groundDistance, groundmask);
-
-        if (isTouched)
-        {
-            if (velocity.x < 0 || velocity.z < 0)
-            {
-                velocity.y = -2f;
-            }
-
-        }
-        isTouched2 = Physics.CheckSphere(treeCheck2.position, groundDistance, groundmask);
-
-        if (isTouched2)
-        {
-            if (velocity.x < 0 || velocity.z < 0)
-            {
-                velocity.y = -2f;
-            }
-
-        }
-        isTouched1 = Physics.CheckSphere(treeCheck1.position, groundDistance, groundmask);
-
-        if (isTouched1)
-        {
-            if (velocity.x < 0 || velocity.z < 0)
-            {
-                velocity.y = -2f;
-            }
-
-        }
+        
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         float x_old = 0f;

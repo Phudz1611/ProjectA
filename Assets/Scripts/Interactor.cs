@@ -25,6 +25,8 @@ public class Interactor : MonoBehaviour
     void Update()
     {
         distance1 = Vector3.Distance(key1.position, _interactionpoint.position);
+        distance2 = Vector3.Distance(key2.position, _interactionpoint.position);
+        distance3 = Vector3.Distance(key3.position, _interactionpoint.position);
         if (distance1 <= 1f && checkObject_1)
         {
             textUI.SetActive(true);
@@ -34,11 +36,8 @@ public class Interactor : MonoBehaviour
                 key_number += 1;
             }
         }
-        else {
-           textUI.SetActive(false);
-        }
-        distance2 = Vector3.Distance(key2.position, _interactionpoint.position);
-        if (distance2 <= 1f && checkObject_2)
+        
+        else if (distance2 <= 1f && checkObject_2)
         {
             textUI.SetActive(true);
             if (Input.GetKeyDown("e"))
